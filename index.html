@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+  <title>Edumongoose | contest</title>
+  <meta charset="utf-8"/>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="assets/plugins/materialize/css/materialize.css">
+  <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/plugins/codemirror/lib/codemirror.css">
+  <script src="assets/plugins/codemirror/lib/codemirror.js"></script>
+  <script src="assets/plugins/codemirror/mode/xml/xml.js"></script>
+  <script src="assets/plugins/codemirror/addon/selection/active-line.js"></script>
+  <style type="text/css">
+  .CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}
+  </style>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="assets/imgs/edu_icon.png">
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center"><img src="assets/imgs/EduMongoose_1.png"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#"><i class="fa fa-sign-in fa-fw"></i>Sign In</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+
+
+    <article>
+      <h2>Active Line Demo</h2>
+
+      <div class="fixed-action-btn " style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="fa fa-paper-plane-o"></i>
+    </a>
+    <ul>
+      <li><a class="btn-floating indigo"><i class="fa fa-facebook"></i></a></li>
+      <li><a class="btn-floating blue accent-1"><i class="fa fa-twitter"></i></a></li>
+      <li><a class="btn-floating blue"><i class="fa fa-linkedin"></i></a></li>
+      <li><a class="btn-floating grey darken-3"><i class="fa fa-github-alt"></i></a></li>
+    </ul>
+  </div>
+
+
+      <form>
+        <textarea id="code" name="code">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"
+          xmlns:georss="http://www.georss.org/georss"
+          xmlns:twitter="http://api.twitter.com">
+          <channel>
+            <title>Twitter / codemirror</title>
+
+            <item>
+              <title>codemirror: http://cloud-ide.com &#8212; they're springing up like mushrooms. This one uses CodeMirror as its editor.</title>
+              <description>codemirror: http://cloud-ide.com &#8212; they're springing up like mushrooms. This one uses CodeMirror as its editor.</description>
+              <pubDate>Thu, 17 Mar 2011 23:34:47 +0000</pubDate>
+              <guid>http://twitter.com/codemirror/statuses/48527733722058752</guid>
+              <link>http://twitter.com/codemirror/statuses/48527733722058752</link>
+              <twitter:source>web</twitter:source>
+              <twitter:place/>
+            </item>
+          </channel>
+        </rss>
+      </textarea>
+    </form>
+
+    <script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+      mode: "application/xml",
+      styleActiveLine: true,
+      lineNumbers: true,
+      lineWrapping: true
+    });
+    </script>
+
+  </article>
+
+   <div class="row">
+    <form class="col s12">
+
+       <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active" href="#test1">Input</a></li>
+        <li class="tab col s3"><a href="#test2">Output</a></li>
+      </ul>
+    </div>
+    <div id="test1" class="col s12">
+      <div class="input-field col s12">
+        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+        <label for="icon_prefix2">Input</label>
+      </div>
+    </div>
+    <div id="test2" class="col s12">
+      <div class="input-field col s12">
+          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+          <label for="icon_prefix2">Output</label>
+        </div>
+    </div>
+  </div>
+
+
+       <div class="input-field col s12">
+        <select >
+          <optgroup label="team 1">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+          </optgroup>
+          <optgroup label="team 2">
+            <option value="3">Option 3</option>
+            <option value="4">Option 4</option>
+          </optgroup>
+        </select>
+        <label>Optgroups</label>
+      </div>
+
+      <a class="waves-effect waves-light btn">RUN</a>
+    </form>
+  </div>
+</div>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('select').material_select();
+});
+$(document).ready(function(){
+    $('ul.tabs').tabs('select_tab', 'tab_id');
+  });
+</script>
+</body>
+</html>
